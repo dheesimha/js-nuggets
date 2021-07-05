@@ -1,27 +1,21 @@
-const bob = {
-    first: "Bob",
-    last: "Jack",
-    city: "Bangalore",
-    siblings: {
-        sister: "Jane"
-    }
-
-}
-
-const { first, last, city, siblings: { sister: favorite_sister } } = bob
-console.log(first, last, city, favorite_sister);
+// ... spread operator : Split into single items and copy them
 
 
-// const firstName = bob.first
-// const lastName = bob.last
-// const sister = bob.siblings.sister
+const udemy = "udemy"
+const letters = [...udemy]
+console.log(letters);
 
-// console.log(firstName, lastName, sister);
-
-function printPerson(person) {
-    console.log(person.first);
-}
-
-printPerson(bob)
+const boys = ["Dhee", "Sahas", "Ritesh"]
+const girls = ["Neethu", "Sam", "Prajna"]
 
 
+const bestFriend = "Zoko"
+
+const friends = [bestFriend, ...boys]
+console.log(friends);
+
+const person = { name: "John", job: "dev" }
+const newPerson = { ...person }
+
+console.log(person);
+console.log((newPerson));
