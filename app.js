@@ -1,36 +1,11 @@
-const menu = [
-    {
-        name: "pancakes",
-        category: "breakfast"
-    },
-    {
-        name: "burger",
-        category: "lunch"
-    },
-    {
-        name: "steak",
-        category: "dinner"
-    },
-    {
-        name: "bacon",
-        category: "breakfast"
-    },
-    {
-        name: "eggs",
-        category: "breakfast"
-    },
-]
+const fruits = ["orange", "banana", "lemon"]
+const friends = ["john", "peter", "bob", "anna", "kelly"]
 
+const fruits1 = fruits[0]
+const fruits2 = fruits[1]
+const fruits3 = fruits[2]
 
-const categories = ["all", ...new Set(menu.map((item) => {
-    return item.category;
-}))]
+console.log(fruits1, fruits2, fruits3);
 
-console.log(categories);
-
-const result = document.querySelector(".result")
-result.innerHTML = categories.map((category) => {
-    return (
-        `<h1>${category}</h1>`
-    )
-}).join("")
+const [john, peter, bob, anna, kelly] = friends
+console.log(john, peter, bob, anna, kelly);
