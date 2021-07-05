@@ -1,11 +1,27 @@
-const fruits = ["orange", "banana", "lemon"]
-const friends = ["john", "peter", "bob", "anna", "kelly"]
+const bob = {
+    first: "Bob",
+    last: "Jack",
+    city: "Bangalore",
+    siblings: {
+        sister: "Jane"
+    }
 
-const fruits1 = fruits[0]
-const fruits2 = fruits[1]
-const fruits3 = fruits[2]
+}
 
-console.log(fruits1, fruits2, fruits3);
+const { first, last, city, siblings: { sister: favorite_sister } } = bob
+console.log(first, last, city, favorite_sister);
 
-const [john, peter, bob, anna, kelly] = friends
-console.log(john, peter, bob, anna, kelly);
+
+// const firstName = bob.first
+// const lastName = bob.last
+// const sister = bob.siblings.sister
+
+// console.log(firstName, lastName, sister);
+
+function printPerson(person) {
+    console.log(person.first);
+}
+
+printPerson(bob)
+
+
