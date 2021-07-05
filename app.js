@@ -1,44 +1,36 @@
-const people =
-    [
-        {
-            name: "Dheemanth",
-            age: 19,
-            position: "developer"
-        },
-        {
-            name: "Sahas",
-            age: 29,
-            position: "Manager"
-        },
-        {
-            name: "Ritesh",
-            age: 24,
-            position: "Team lead"
-        },
+const menu = [
+    {
+        name: "pancakes",
+        category: "breakfast"
+    },
+    {
+        name: "burger",
+        category: "lunch"
+    },
+    {
+        name: "steak",
+        category: "dinner"
+    },
+    {
+        name: "bacon",
+        category: "breakfast"
+    },
+    {
+        name: "eggs",
+        category: "breakfast"
+    },
+]
 
-    ]
 
-const ages = people.map((person) => {
+const categories = ["all", ...new Set(menu.map((item) => {
+    return item.category;
+}))]
 
-    return person.age
-})
+console.log(categories);
 
-console.log(ages);
-
-const newPeople = people.map((item) => {
-    return {
-        firstName: item.name.toUpperCase(),
-        oldAge: item.age + 20
-
-    }
-})
-
-console.log(newPeople);
-
-const names = people.map((person) => {
-    `<h1>${person.name}</h1>`
-})
-
-const result = document.getElementById("result");
-
-result.innerHTML = names;
+const result = document.querySelector(".result")
+result.innerHTML = categories.map((category) => {
+    return (
+        `<h1>${category}</h1>`
+    )
+}).join("")
