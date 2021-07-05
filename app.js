@@ -1,21 +1,25 @@
-// ... spread operator : Split into single items and copy them
+const fruits = ["apple", "orange", "lemon", "banana"]
+
+const [first, ...restOfTheFruits] = fruits
+const specificFruit = restOfTheFruits.find((fruit) => fruit === "lemon")
+
+console.log(specificFruit);
+
+console.log(first, restOfTheFruits);
+
+const person = { name: "Dheemanth", lastName: "Narasimha", job: "dev" }
+
+const { name, ...restOfThePerson } = person
+
+console.log(name, restOfThePerson);
 
 
-const udemy = "udemy"
-const letters = [...udemy]
-console.log(letters);
+//functions
 
-const boys = ["Dhee", "Sahas", "Ritesh"]
-const girls = ["Neethu", "Sam", "Prajna"]
+const getAvergage = (name, ...scores) => {
+    console.log(name);
+    console.log(scores);
 
+}
 
-const bestFriend = "Zoko"
-
-const friends = [bestFriend, ...boys]
-console.log(friends);
-
-const person = { name: "John", job: "dev" }
-const newPerson = { ...person }
-
-console.log(person);
-console.log((newPerson));
+getAvergage(person.name, 89, 70, 12)
